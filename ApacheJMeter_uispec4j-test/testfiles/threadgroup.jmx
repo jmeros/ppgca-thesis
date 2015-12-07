@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<testelement class="org.apache.jmeter.testelement.TestPlan">
+<property xml:space="preserve" name="TestPlan.functional_mode">false</property>
+<property xml:space="preserve" name="TestElement.gui_class">org.apache.jmeter.control.gui.TestPlanGui</property>
+<property xml:space="preserve" name="TestElement.name">Test Plan</property>
+<property xml:space="preserve" name="TestElement.test_class">org.apache.jmeter.testelement.TestPlan</property>
+<collection name="TestPlan.thread_groups" class="java.util.LinkedList"/>
+<testelement name="TestPlan.user_defined_variables" class="org.apache.jmeter.config.Arguments">
+<collection name="Arguments.arguments" class="java.util.ArrayList"/>
+<property xml:space="preserve" name="TestElement.gui_class">org.apache.jmeter.config.gui.ArgumentsPanel</property>
+<property xml:space="preserve" name="TestElement.name">Argument List</property>
+<property xml:space="preserve" name="TestElement.test_class">org.apache.jmeter.config.Arguments</property>
+</testelement>
+</testelement>
+<node>
+<testelement class="org.apache.jmeter.threads.ThreadGroup">
+<property xml:space="preserve" name="ThreadGroup.num_threads">10</property>
+<property xml:space="preserve" name="TestElement.gui_class">org.apache.jmeter.threads.gui.ThreadGroupGui</property>
+<property xml:space="preserve" name="ThreadGroup.ramp_time">2</property>
+<property xml:space="preserve" name="TestElement.name">Thread Group</property>
+<testelement name="ThreadGroup.main_controller" class="org.apache.jmeter.control.LoopController">
+<property xml:space="preserve" name="LoopController.loops">-1</property>
+<property xml:space="preserve" name="TestElement.gui_class">org.apache.jmeter.control.gui.LoopControlPanel</property>
+<property xml:space="preserve" name="LoopController.continue_forever">false</property>
+<property xml:space="preserve" name="TestElement.name">Loop Controller</property>
+<property xml:space="preserve" name="TestElement.test_class">org.apache.jmeter.control.LoopController</property>
+</testelement>
+<property xml:space="preserve" name="TestElement.test_class">org.apache.jmeter.threads.ThreadGroup</property>
+</testelement>
+</node>
+</node>
